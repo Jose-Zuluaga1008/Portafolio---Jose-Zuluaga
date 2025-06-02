@@ -1,0 +1,610 @@
+@charset "utf-8";
+/* CSS Document */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+
+  overflow-x: hidden;  /* ⚠️ Esto lo desactiva a propósito */
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #D86F45;
+}
+
+
+.hero-title {
+  color: white !important;
+}
+
+.custom-navbar {
+  background-color: #3C3C3C;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.custom-navbar .nav-link {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}
+
+
+.custom-navbar .navbar-brand img {
+  height: 55px; 
+}
+
+.custom-navbar .navbar-toggler {
+  padding: 0.6rem 1rem;
+  font-size: 1.25rem;
+}
+
+
+.hero {
+  background-image: url( "../img/Fondo-Parte-(1)-V3.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
+}
+.hero-content {
+  z-index: 2;
+  display: inline-block;
+}
+.hero-title-img {
+  max-width: 100%;
+  height: auto;
+  width: 80vw; /* ajusta al tamaño deseado */
+  display: block;
+  margin: 0 auto 20px auto;
+}
+.hero-img {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  max-height: 80%;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+  .year-box-container {
+    justify-content: center;
+  }
+  .hero-img {
+    position: static;
+    margin-top: 30px;
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+
+
+
+.about {
+  background-image: url("../img/Fondo-Parte-(2)-V3.png"); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 60px;
+}
+
+.about-title {
+  color: #D86F45;
+	
+}
+
+.about-img {
+  max-width: 100%;
+  width: 90%;
+  margin-left: -20%; 
+  transform: scale(2);
+	
+}
+
+.competencias-img {
+  width: 70%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+   margin: 0 auto;
+  display: block;
+
+}
+
+@media (max-width: 992px) {
+  .competencias-img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .competencias-img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .competencias-img {
+    width: 100%;
+  }
+}
+
+
+.transition-section {
+  background-image: url("../img/Tra-1.png");
+  background-size: cover;
+  background-position: center;
+  height: 30vh; /* <-- antes era 80vh */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.servicios-transition {
+  background-image: url( "../img/Tra-5.png");
+}
+
+.transition-overlay {
+  background-color: #1D1A17;
+  padding: 60px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #D86F45;
+}
+.transition-title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .transition-title {
+    font-size: 2.5rem;
+  }
+
+  .transition-overlay {
+    padding: 30px;
+  }
+}
+
+
+/* Contenedor */
+.hover-switch {
+  position: relative;
+  height: 100px; /* Fija una altura razonable que no cambie al hacer hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Título visible por defecto */
+.transition-title {
+  transition: opacity 0.3s ease;
+}
+
+.transition-description {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 90%;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s ease;
+  color: white; /* ← Esto asegura el texto blanco */
+}
+
+/* Al hacer hover, intercambiamos visibilidad */
+.hover-switch:hover .transition-title {
+  opacity: 0;
+}
+
+.hover-switch:hover .transition-description {
+  opacity: 1;
+}
+
+
+.project-section {
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.project-img {
+  max-width: 100%;
+  width: 80%;
+  transition: transform 0.3s ease;
+	
+	
+	
+	
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Mantener la imagen centrada al hacer hover */
+.project-img {
+  border-radius: 2rem;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-img:hover {
+  transform: scale(1.02);
+}
+
+.overlay-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%; /* Ajusta aquí según lo que necesites */
+  height: 50%;
+  background: rgba(20, 20, 20, 0.9);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Overlay aparece SOLO cuando se hace hover en .image-wrapper */
+.image-wrapper:hover .overlay-info {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animación y desvanecido del contenido interno */
+.overlay-info h3,
+.overlay-info p,
+.overlay-info .icon-bar img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.image-wrapper:hover .overlay-info h3 {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.image-wrapper:hover .overlay-info p {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.image-wrapper:hover .overlay-info .icon-bar img {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Iconos */
+.icon-bar {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon-bar img {
+  height: 70px;
+}
+
+
+
+.slide-container {
+  
+  position: relative;
+  height: 100px; /* Ajusta al alto real del PNG */
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(200%); /* 2 imágenes = 200% */
+  animation: slideLoop 20s linear infinite;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Animación continua sin cortes */
+@keyframes slideLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .overlay-info {
+    width: 95%;
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    border-radius: 1.5rem;
+  }
+
+  .overlay-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .overlay-info p {
+    font-size: 1rem;
+  }
+
+  .icon-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .icon-bar img {
+    height: 30px;
+  }
+}
+
+
+
+.video-section {
+  position: relative;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 600px; /* Ajusta según necesidad */
+}
+
+.section-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.video-wrapper {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .video-wrapper iframe {
+    height: 240px;
+  }
+}
+
+
+.servicios-section {
+  background-image: url("../img/Tra-4.png");
+  background-size: cover;
+  background-position: top center;
+  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0; 
+  gap: 2rem;
+}
+
+.servicio-card {
+  background-color: rgba(29, 26, 23, 0.9);
+  border: 2px solid #C65A2C;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.servicio-title {
+  color: #C65A2C;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.servicio-card p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.servicio-title {
+  display: flex;
+  align-items: center;
+ justify-content: center;
+  font-size: 1.5rem;
+  color: #C65A2C;
+  margin-bottom: 10px;
+}
+
+.servicio-icon-top {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .servicios-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicio-card {
+    width: 90%;
+  }
+}
+
+
+.contactinfo-section {
+  background-image: url( "../img/Fondo-Parte-(2)-V3.png"); 
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.contactinfo-overlay {
+  background-color: transparent; /* Quitamos el fondo oscuro */
+  border: 2px solid #C65A2C;     /* Añadimos el trazo */
+  padding: 60px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+.contactinfo-title {
+  font-size: 2.5rem;
+  color: #C65A2C;
+  margin-bottom: 40px;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 60px;
+}
+
+.contact-method {
+  max-width: 300px;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+.contact-method p {
+  font-size: 1rem;
+}
+
+.contact-form-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form-container h3 {
+  color: #C65A2C;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #12110F;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form-container button {
+  background-color: #C65A2C;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form-container button:hover {
+  background-color: #9e3f17;
+}
