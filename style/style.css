@@ -1,5 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
+
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -7,12 +15,24 @@ body, html {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden; 
+	
+	
+	
+	body, html, section {
+  background-color: #000000;
+  color: #fff;
+}
+	
 }
 h1, h2, h3, h4, h5, h6 {
   color: #D86F45;
 }
 .hero-title {
   color: white !important;
+}
+section {
+  margin: 0;
+  padding: 0;
 }
 .custom-navbar {
   background-color: #3C3C3C;
